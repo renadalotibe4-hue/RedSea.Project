@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حذف عنصر - دليل البحر الأحمر</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .form-container {
+            background: white;
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            text-align: right;
+        }
+        .form-group {
+            margin-bottom: 25px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #005f73;
+        }
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            font-family: inherit;
+            background-color: #fdfdfd;
+        }
+        .warning-box {
+            background-color: #fff5f5;
+            border: 1px solid #feb2b2;
+            color: #c53030;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+        .btn-delete {
+            background-color: #e76f51;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 10px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 18px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .btn-delete:hover {
+            background-color: #cf5d42;
+            transform: scale(1.02);
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-container">
+            <img src="../images/logo.png" alt="Logo">
+            <a href="../index.html">الرئيسية</a>
+            <a href="admin_panel.html">لوحة التحكم</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>حذف عنصر (Delete Item)</h1>
+        
+        <div class="form-container">
+            <div class="warning-box">
+                <strong>تنبيه:</strong> الحذف نهائي ولا يمكن التراجع عنه بعد إتمام العملية.
+            </div>
+
+            <div class="form-group">
+                <label>اختر العنصر المراد حذفه نهائياً:</label>
+                <select>
+                    <option value="">-- اختر من القائمة --</option>
+                    <option>منتجع شاطئ البحر الأحمر</option>
+                    <option>جزيرة أمالا</option>
+                    <option>مشروع البحر الأحمر العالمي</option>
+                </select>
+            </div>
+
+            <button class="btn-delete">حذف العنصر الآن</button>
+        </div>
+    </div>
+
+</body>
+</html>

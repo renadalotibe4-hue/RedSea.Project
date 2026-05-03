@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تعديل عنصر - دليل البحر الأحمر</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .form-container {
+            background: white;
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            text-align: right;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #005f73;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-sizing: border-box;
+            font-family: inherit;
+        }
+        textarea {
+            height: 100px;
+            resize: vertical;
+        }
+        .btn-submit {
+            background-color: #005f73;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 10px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 18px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .btn-submit:hover {
+            background-color: #0a9396;
+        }
+        .btn-view {
+            background-color: #94d2bd;
+            color: #005f73;
+            border: none;
+            padding: 12px;
+            border-radius: 10px;
+            cursor: pointer;
+            width: 100%;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        .divider {
+            height: 1px;
+            background: #eee;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-container">
+            <img src="../images/logo.png" alt="Logo">
+            <a href="../index.html">الرئيسية</a>
+            <a href="admin_panel.html">لوحة التحكم</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>تعديل عنصر</h1>
+        
+        <div class="form-container">
+            <div class="form-group">
+                <label>اختر العنصر المراد تعديله:</label>
+                <select>
+                    <option>منتجع شاطئ البحر الأحمر</option>
+                    <option>جزيرة أمالا</option>
+                </select>
+            </div>
+
+            <button class="btn-view">عرض البيانات للتعديل</button>
+            
+            <div class="divider"></div>
+
+            <div class="form-group">
+                <label>الاسم الجديد:</label>
+                <input type="text" placeholder="أدخل الاسم الجديد هنا">
+            </div>
+
+            <div class="form-group">
+                <label>الوصف الجديد:</label>
+                <textarea placeholder="وصف تقريبي للمكان السياحي..."></textarea>
+            </div>
+
+            <button class="btn-submit">حفظ التعديلات</button>
+        </div>
+    </div>
+
+</body>
+</html>

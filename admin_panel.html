@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة تحكم المسؤول</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .admin-actions {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 50px;
+        }
+        .admin-card {
+            background: #ffffff;
+            padding: 40px 20px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 95, 115, 0.05);
+            text-align: center;
+            width: 200px;
+            text-decoration: none;
+            transition: all 0.4s ease;
+            border: 1px solid rgba(0, 95, 115, 0.1);
+        }
+        .admin-card:hover {
+            transform: translateY(-10px);
+            background-color: #005f73;
+            box-shadow: 0 15px 35px rgba(0, 95, 115, 0.2);
+        }
+        .admin-card h4 {
+            margin: 0;
+            color: #005f73;
+            font-size: 20px;
+            transition: 0.3s;
+        }
+        .admin-card:hover h4 {
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-container">
+            <img src="../images/logo.png" alt="Red Sea Logo">
+            <a href="../index.html">الرئيسية</a>
+            <a href="about.html">من نحن</a>
+            <a href="admin_panel.html">لوحة التحكم</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header>
+            <h1>لوحة تحكم المسؤول</h1>
+            <p style="color: #666;">إدارة أقسام دليل البحر الأحمر السياحي بكل سهولة</p>
+        </header>
+
+        <div class="admin-actions">
+            <a href="add_item.html" class="admin-card">
+                <h4>إضافة عنصر</h4>
+            </a>
+            <a href="edit_item.html" class="admin-card">
+                <h4>تعديل عنصر</h4>
+            </a>
+            <a href="delete_item.html" class="admin-card">
+                <h4>حذف عنصر</h4>
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
