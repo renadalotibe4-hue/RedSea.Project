@@ -2,35 +2,45 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>من نحن</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav>
-        <a href="../index.html">الرئيسية</a>
-        <a href="admin_panel.html">لوحة التحكم</a>
+        <div class="nav-container">
+            <img src="images/logo.png" alt="Red Sea Logo">
+            <a href="index.html">الرئيسية</a>
+            <a href="about.html">من نحن</a>
+            <a href="admin_panel.html">لوحة التحكم</a>
+        </div>
     </nav>
+    
     <main>
-    <div class="items-grid">
-        <a href="pages/item_profile.html" class="item-card">
-            <img src="images/amala.jpg" alt="جزيرة أمالا">
-            <h3>جزيرة أمالا (Amaala)</h3>
-            <p>وجهة سياحية فاخرة تركز على النقاهة والصحة على ساحل البحر الأحمر.</p>
-        </a>
+        <div class="container">
+            <h1 style="color: #005f73; margin-top: 20px;">من نحن</h1>
+            <p>نحن طالبات IT بجامعة الإمام، نسعى لإبراز جمال وتطور وجهات البحر الأحمر السياحية.</p>
+        </div>
 
-        <a href="pages/item_profile.html" class="item-card">
-        <!--image source: https://www.kaust.edu.sa/ar/news/scientific-paper-details-marine-spatial-planning-at-red-sea-project-->
-            <img src="images/red_sea.jpeg" alt="مشروع البحر الأحمر">
-            <h3>مشروع البحر الأحمر</h3>
-            <p>مشروع سياحي عالمي يضم أرخبيلاً من الجزر الساحرة والطبيعة الخلابة.</p>
-        </a>
+        <div class="items-grid">
+            <div class="item-card">
+                <img src="images/amala.jpg" alt="جزيرة أمالا">
+                <h3>جزيرة أمالا (Amaala)</h3>
+                <p>وجهة سياحية فاخرة تركز على النقاهة والصحة على ساحل البحر الأحمر.</p>
+            </div>
 
-        <a href="pages/item_profile.html" class="item-card">
-            <img src="images/sindalah.jpg" alt="جزيرة سندالة">
-            <h3>جزيرة سندالة</h3>
-            <p>أولى وجهات نيوم للسياحة البحرية الفاخرة وأندية اليخوت.</p>
-        </a>
-    </div>
-</main>
+            <div class="item-card">
+                <img src="images/red_sea.jpeg" alt="مشروع البحر الأحمر">
+                <h3>مشروع البحر الأحمر</h3>
+                <p>مشروع سياحي عالمي يضم أرخبيلاً من الجزر الساحرة والطبيعة الخلابة.</p>
+            </div>
+
+            <div class="item-card">
+                <img src="images/sindalah.jpg" alt="جزيرة سندالة">
+                <h3>جزيرة سندالة</h3>
+                <p>أولى وجهات نيوم للسياحة البحرية الفاخرة وأندية اليخوت.</p>
+            </div>
+        </div>
+    </main>
 </body>
 </html>
