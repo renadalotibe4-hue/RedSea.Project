@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>جزيرة أمالا - دليل البحر الأحمر السياحي</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .island-header {
+            background: linear-gradient(135deg, #005f73, #0a9396);
+            color: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin: 30px auto;
+            max-width: 900px;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            box-shadow: 0 10px 30px rgba(0,95,115,0.2);
+        }
+        .island-logo {
+            width: 140px; height: 140px;
+            object-fit: cover;
+            border-radius: 16px;
+            border: 4px solid rgba(255,255,255,0.3);
+            flex-shrink: 0;
+        }
+        .island-info h1 { margin: 0 0 10px 0; font-size: 28px; }
+        .island-info p  { margin: 0; opacity: 0.9; line-height: 1.7; }
+        .section-title {
+            max-width: 900px;
+            margin: 40px auto 20px auto;
+            color: #005f73;
+            font-size: 22px;
+            border-bottom: 3px solid #0a9396;
+            padding-bottom: 10px;
+        }
+        .items-grid {
+            max-width: 900px;
+            margin: 0 auto 50px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        .item-card {
+            background: white; border-radius: 16px; overflow: hidden;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.07);
+            text-decoration: none; color: inherit;
+            transition: transform 0.3s, box-shadow 0.3s; display: block;
+        }
+        .item-card:hover { transform: translateY(-6px); box-shadow: 0 14px 35px rgba(0,95,115,0.15); }
+        .item-card img { width: 100%; height: 180px; object-fit: cover; }
+        .item-card-body { padding: 18px 20px; }
+        .item-card-body h3 { margin: 0 0 8px 0; color: #005f73; font-size: 18px; }
+        .item-card-body p  { margin: 0; color: #555; font-size: 14px; line-height: 1.6; }
+        .item-tag {
+            display: inline-block; background: #e0f4f5; color: #005f73;
+            font-size: 12px; padding: 3px 10px; border-radius: 20px;
+            margin-bottom: 8px; font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <div class="nav-container">
+        <img src="images/logo.png" alt="Red Sea Logo">
+        <a href="index.html">الرئيسية</a>
+        <a href="about.html">من نحن</a>
+        <a href="admin_panel.html">لوحة التحكم</a>
+    </div>
+</nav>
+<div class="container">
+
+    <div class="island-header">
+        <!--image source: https://www.vision2030.gov.sa/ar/explore/projects/amaala-->
+        <img src="images/amala.jpg" alt="جزيرة أمالا" class="island-logo">
+        <div class="island-info">
+            <h1>🏝️ جزيرة أمالا (Amaala)</h1>
+            <p>وجهة سياحية فاخرة تركز على النقاهة والصحة على ساحل البحر الأحمر. تضم منتجعات عالمية المستوى وتجارب فنية وثقافية استثنائية في قلب طبيعة بكر.</p>
+        </div>
+    </div>
+
+    <h2 class="section-title">🏨 المرافق والمنتجعات</h2>
+    <div class="items-grid">
+
+        <a href="item_profile.html?item=clinique" class="item-card">
+            <!--image source: https://www.vision2030.gov.sa/ar/explore/projects/amaala-->
+            <img src="images/amala.jpg" alt="كلينيك لا بريري">
+            <div class="item-card-body">
+                <span class="item-tag">صحة وتعافي</span>
+                <h3>منتجع كلينيك لا بريري</h3>
+                <p>منتجع استرخاء صحي فاخر يجمع بين الخدمات الطبية والفندقية الفاخرة، يضم نادياً صحياً وفللاً سكنية ومرافق للتشخيص والعلاج.</p>
+            </div>
+        </a>
+
+        <a href="item_profile.html?item=sixsenses" class="item-card">
+            <!--image source: https://www.vision2030.gov.sa/ar/explore/projects/amaala-->
+            <img src="images/amala.jpg" alt="سيكس سينسز">
+            <div class="item-card-body">
+                <span class="item-tag">فنون وثقافة وتأمل</span>
+                <h3>منتجع سيكس سينسز أمالا</h3>
+                <p>منتجع صحي يضم مرافق للفنون والثقافة والتأمل، يتمتع بإطلالات خلابة على خليج المانجروف وتضاريس أمالا الطبيعية.</p>
+            </div>
+        </a>
+
+    </div>
+</div>
+</body>
+</html>

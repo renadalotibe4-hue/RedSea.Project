@@ -1,10 +1,15 @@
-<?php include 'db.php'; ?>
+<?php
+include 'db.php';
+$id = $_GET['id'];
+$catResult = mysqli_query($conn, "SELECT * FROM category WHERE ID = $id");
+$category = mysqli_fetch_assoc($catResult);
+?>
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>دليل البحر الأحمر السياحي</title>
+    <title><?php echo $category['name']; ?> - دليل البحر الأحمر</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -18,26 +23,21 @@
     </nav>
     <div class="container">
         <header>
-            <h1>مرحباً بكم في دليل البحر الأحمر السياحي</h1>
-            <p>اختر وجهتك السياحية</p>
+            <h1><?php echo $category['name']; ?></h1>
+            <p><?php echo $category['description']; ?></p>
         </header>
         <main>
             <div class="items-grid">
                 <?php
-                $result = mysqli_query($conn, "SELECT * FROM category");
-                while ($row = mysqli_fetch_assoc($result)) {
-                    $id   = $row['ID'];
+                $items = mysqli_query($conn, "SELECT * FROM item WHERE categoryID = $id");
+                while ($row = mysqli_fetch_assoc($items)) {
+                    $itemID = $row['ID'];
                     $name = $row['name'];
+                    $logo = $row['logo'];
                     $desc = $row['description'];
-
-                    // صورة لكل جزيرة حسب الـ ID
-                    if ($id == 1) $img = "amala.jpg";
-                    else if ($id == 2) $img = "red_sea.jpg";
-                    else $img = "sindalah.jpg";
-
                     echo "
-                    <a href='category.php?id=$id' class='item-card'>
-                        <img src='images/$img' alt='$name'>
+                    <a href='item_profile.php?id=$itemID' class='item-card'>
+                        <img src='images/$logo' alt='$name'>
                         <h3>$name</h3>
                         <p>$desc</p>
                     </a>";
