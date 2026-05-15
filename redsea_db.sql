@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: May 15, 2026 at 05:20 AM
+-- Generation Time: May 15, 2026 at 05:40 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.0.28
 
@@ -51,6 +51,14 @@ CREATE TABLE `categories` (
   `name` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `categories`
+--
+
+INSERT INTO `categories` (`id`, `name`) VALUES
+(1, 'الأنشطة والرياضات البحرية '),
+(2, 'المطاعم والجلسات الشاطئية ');
+
 -- --------------------------------------------------------
 
 --
@@ -68,6 +76,29 @@ CREATE TABLE `Category` (
 
 INSERT INTO `Category` (`id`, `name`) VALUES
 (1, 'Hotels And Resorts ');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `hotels`
+--
+
+CREATE TABLE `hotels` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `location` varchar(255) NOT NULL,
+  `price` int(11) DEFAULT NULL,
+  `rating` varchar(50) DEFAULT NULL,
+  `type` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `hotels`
+--
+
+INSERT INTO `hotels` (`id`, `name`, `location`, `price`, `rating`, `type`) VALUES
+(1, 'ريتز كارلتون - جزيرة الشيبارة', 'املج', 5000, '5', 'hotel'),
+(2, 'مطعم المأكولات البحرية العائم ', 'شاطئ الوجه', 250, '4', 'landmark');
 
 -- --------------------------------------------------------
 
@@ -136,6 +167,12 @@ ALTER TABLE `Category`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `hotels`
+--
+ALTER TABLE `hotels`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `item`
 --
 ALTER TABLE `item`
@@ -161,13 +198,19 @@ ALTER TABLE `Admin`
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `Category`
 --
 ALTER TABLE `Category`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `hotels`
+--
+ALTER TABLE `hotels`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `item`
