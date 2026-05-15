@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: May 15, 2026 at 02:38 AM
+-- Generation Time: May 15, 2026 at 04:38 AM
 -- Server version: 10.4.28-MariaDB
--- PHP Version: 8.2.4
+-- PHP Version: 8.0.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -81,6 +81,26 @@ CREATE TABLE `item` (
 INSERT INTO `item` (`id`, `name`, `description`, `image`, `working_hours`, `website`, `category_id`) VALUES
 (1, 'The St.Regis Red Sea', 'منتجع فاخر على شواطئ البحر الأحمر ', 'hotel.jpg', '24 Hours', 'www.stregis.com', 1);
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `reviews`
+--
+
+CREATE TABLE `reviews` (
+  `id` int(11) NOT NULL,
+  `user_name` varchar(100) NOT NULL,
+  `comment` text NOT NULL,
+  `rating` int(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `reviews`
+--
+
+INSERT INTO `reviews` (`id`, `user_name`, `comment`, `rating`) VALUES
+(1, 'Sara', 'An incredible experience!', 5);
+
 --
 -- Indexes for dumped tables
 --
@@ -105,6 +125,12 @@ ALTER TABLE `item`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `reviews`
+--
+ALTER TABLE `reviews`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -124,6 +150,12 @@ ALTER TABLE `Category`
 -- AUTO_INCREMENT for table `item`
 --
 ALTER TABLE `item`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `reviews`
+--
+ALTER TABLE `reviews`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
