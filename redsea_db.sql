@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: May 15, 2026 at 04:38 AM
+-- Generation Time: May 15, 2026 at 05:20 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.0.28
 
@@ -39,6 +39,17 @@ CREATE TABLE `Admin` (
 
 INSERT INTO `Admin` (`id`, `username`, `password`) VALUES
 (1, 'Renad', '123456');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `categories`
+--
+
+CREATE TABLE `categories` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -113,6 +124,12 @@ ALTER TABLE `Admin`
   ADD UNIQUE KEY `username` (`username`);
 
 --
+-- Indexes for table `categories`
+--
+ALTER TABLE `categories`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `Category`
 --
 ALTER TABLE `Category`
@@ -139,6 +156,12 @@ ALTER TABLE `reviews`
 --
 ALTER TABLE `Admin`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `categories`
+--
+ALTER TABLE `categories`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `Category`
